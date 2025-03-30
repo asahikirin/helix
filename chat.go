@@ -118,12 +118,14 @@ type SendChatAnnouncementResponse struct {
 
 type GetChannelEmotesResponse struct {
 	ResponseCommon
-	Data ManyEmotes
+	Data     ManyEmotes
+	Template string `json:"template"`
 }
 
 type GetEmoteSetsResponse struct {
 	ResponseCommon
-	Data ManyEmotesWithOwner
+	Data     ManyEmotesWithOwner
+	Template string `json:"template"`
 }
 
 type ManyEmotes struct {

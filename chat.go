@@ -143,6 +143,9 @@ type Emote struct {
 	Tier       string     `json:"tier"`
 	EmoteType  string     `json:"emote_type"`
 	EmoteSetId string     `json:"emote_set_id"`
+	Format     []string   `json:"format"`
+	Scale      []string   `json:"scale"`
+	ThemeMode  []string   `json:"theme_mode"`
 }
 
 type EmoteWithOwner struct {

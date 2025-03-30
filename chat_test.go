@@ -3,6 +3,7 @@ package helix
 import (
 	"context"
 	"net/http"
+	"reflect"
 	"testing"
 )
 
@@ -445,7 +446,7 @@ func TestGetEmoteSets(t *testing.T) {
 		} else {
 			for i, expectedEmote := range testCase.expectedEmotes {
 				actualEmote := resp.Data.Emotes[i]
-				if expectedEmote != actualEmote {
+				if !reflect.DeepEqual(expectedEmote, actualEmote) {
 					t.Errorf("mismatching emotes %#v != %#v", expectedEmote, actualEmote)
 				}
 			}
